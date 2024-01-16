@@ -1,0 +1,143 @@
+{
+	"name": "Alex Hernán Laulhe",
+	"nickname": "ahlaulhee",
+	"location": "Córdoba, Argentina",
+	"photo": "https://i.imgur.com/n6btC7c.png",
+	"email": "ahlaulhe@gmail.com",
+	"github": "https://github.com/ahlaulhee",
+	"linkedin": "https://www.linkedin.com/in/alex-laulhe/",
+	"bio": "I began my journey in software development as a hobby during my high school years, and decided to fully commit to it when I entered the Universidad Tecnológica Nacional in Córdoba, where I pursued a degree in Programming. I successfully completed my studies in 2023. I am driven by a passion for learning new technologies and creating innovative projects. I believe my strengths lie in my problem-solving abilities, logical and analytical thinking, and my enthusiasm for tackling new projects. I primarily use the MERN stack (MongoDB, Express, React, and NodeJS), but I also have knowledge in many other technologies and frameworks. I am always eager to expand my skill set and take on new challenges in the ever-evolving field of software development.",
+	"skills": {
+		"languages": [
+			{
+				"language": "English",
+				"proficiency": "C2",
+				"certificate": "https://www.efset.org/cert/f8TD3A"
+			},
+			{
+				"language": "Spanish",
+				"proficiency": "Native",
+				"certificate": ""
+			}
+		],
+		"tech_languages": ["HTML5", "CSS3", "JavaScript", "TypeScript", "Java", "Python", "C#"],
+		"frameworks": [
+			"NextJS",
+			"React",
+			"React Native",
+			".NET",
+			"NodeJS",
+			"Svelte",
+			"Angular",
+			"Spring"
+		],
+		"databases": ["MongoDB", "MySQL", "PostgresQL", "Microsoft SQL Server", "Firebase"],
+		"os": ["Linux", "Windows"]
+	},
+
+	"projects": [
+		{
+			"name": "Terminal Portfolio",
+			"thumbnail": "https://i.imgur.com/Uzqim4n.png",
+			"description": "My latest project is my full-stack developer portfolio, designed as an interactive terminal interface. Visitors can explore my background, education, and projects through popup windows that mimic terminal commands. This unique approach combines my technical skills with creative web design for an engaging user experience."
+		},
+		{
+			"name": "TimeWise",
+			"thumbnail": "https://i.imgur.com/vLdWO5g.png",
+			"description": "'Timewise' is my recent project, a web app that streamlines password and task management securely. Users authenticate with a name and password, and passwords are stored locally, not in a central database, ensuring privacy. It generates passwords based on user input and allows tracking of task time. It's a versatile tool for efficient and secure management."
+		},
+		{
+			"name": "BiblioBuds",
+			"thumbnail": "https://i.imgur.com/NP7tzxv.png",
+			"description": "Led a cross-functional team in building an e-commerce platform for books using SCRUM Agile methodology. Worked on both front-end and back-end development to deliver a seamless online shopping experience."
+		},
+		{
+			"name": "Recipe Vault",
+			"thumbnail": "https://i.imgur.com/tTTjC71.png",
+			"description": "Independently developed a dynamic food recipe website where users can explore, add, and search for recipes. Implemented features for easy recipe filtering and searching, providing a user-friendly platform for culinary enthusiasts to discover and contribute to a growing collection of recipes."
+		},
+		{
+			"name": "WTTG2 Helper",
+			"thumbnail": "https://i.imgur.com/BelG4ak.png",
+			"description": "The 'WTTG2 Helper' is a website tailored for new 'Welcome to the Game 2' players. It simplifies key management and aids in locating keys within the game's source code. With an easy-to-use interface, it ensures players keep track of their keys and offers guidance on deciphering source code, enhancing the gaming experience."
+		},
+		{
+			"name": "PaSSafe",
+			"thumbnail": "https://i.imgur.com/ogxT5P8.png",
+			"description": "Created a versatile mobile application that serves as both a secure password manager and a news aggregator. Users can generate and customize strong passwords for various accounts, ensuring their online security. The app also offers a comprehensive news section with multiple categories, allowing users to stay informed about their areas of interest."
+		}
+	],
+
+	"formal_education": [
+		{
+			"name": "Technical Degree",
+			"source": "Universidad Tecnológica de Córdoba",
+			"description": "In 2023, I successfully completed a Technical Degree in Software Development, a pivotal step in my career journey. This comprehensive program was tailored to equip me with the skills and knowledge essential for developing software solutions within corporate environments. Throughout this educational experience, I acquired an in-depth understanding of critical theoretical concepts, including REST APIs, Data Structures, Database Queries, Algorithms, as well as agile methodologies such as SCRUM. Furthermore, I delved into various important aspects of programming, including inheritance, polymorphism, and more. This educational journey not only broadened my technical expertise but also instilled a deep passion for software development and problem-solving.",
+			"initial_date": "01/01/2020",
+			"end_date": "04/03/2023"
+		},
+		{
+			"name": "FullStack Developer Bootcamp",
+			"source": "Henry",
+			"description": "In September 2023, I successfully graduated from the Henry FullStack Developer Bootcamp, a transformative experience that accelerated my journey as a FullStack Developer. This intensive program provided hands-on training in a versatile tech stack that encompassed React, PostgreSQL, Express, Node.js, CSS, HTML5, Git, GitHub, Gitflow, and SCRUM. By immersing myself in this immersive learning environment, I gained practical skills and knowledge that are highly relevant in today's dynamic tech industry. The Henry Bootcamp not only honed my technical abilities but also fostered a collaborative and agile mindset, essential qualities for thriving in a fast-paced development landscape. This bootcamp experience has played a pivotal role in shaping my career and enhancing my proficiency as a FullStack Developer.",
+			"initial_date": "11/03/2023",
+			"end_date": "15/09/2023"
+		}
+	],
+	"complementary_education": [
+		{
+			"name": "Udemy - Automate the Boring Stuff with Python Programming",
+			"date": "2020"
+		},
+		{
+			"name": "Udemy - The Modern Python 3 Bootcamp",
+			"date": "2020"
+		},
+		{
+			"name": "Udemy - Java Programming Masterclass updated to Java 17",
+			"date": "2021"
+		},
+		{
+			"name": "Udemy - React Native Complete Course with Redux, NodeJS & MongoDB",
+			"date": "2022"
+		},
+		{
+			"name": "freeCodeCamp - Learn Rust Programming - Complete Course",
+			"date": "2023"
+		},
+		{
+			"name": "freeCodeCamp - Learn Tailwind CSS - Course for Beginners",
+			"date": "2023"
+		},
+		{
+			"name": "freeCodeCamp - Learn TypeScript - Full Tutorial",
+			"date": "2023"
+		},
+		{
+			"name": "freeCodeCamp - Back End Development and APIs",
+			"date": "2023"
+		},
+		{
+			"name": "freeCodeCamp - JavaScript Algorithms and Data Structure Certification",
+			"date": "2023"
+		},
+		{
+			"name": "Udemy - Universidad Angular - De Cero a Experto en Angular!",
+			"date": "2023"
+		},
+		{
+			"name": "Udemy - Universidad Java - De Cero a Experto - Más Completo +106 hrs",
+			"date": "2023"
+		}
+	],
+	"jobs": [
+		{
+			"job": "Fullstack .NET Developer",
+			"company": "Atrix S.A",
+			"current": true,
+			"initial_date": "01/12/2023",
+			"end_date": null,
+			"description": "Mainly mantaining the program used by the notaries with a small team in the city of Córdoba."
+		}
+	]
+}
