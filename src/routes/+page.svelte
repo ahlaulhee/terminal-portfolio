@@ -1,17 +1,38 @@
 <script lang="ts">
+	import HelpScreen from '../components/HelpScreen.svelte';
 	import TerminalFrame from '../components/TerminalFrame.svelte';
+	import WelcomeScreen from '../components/WelcomeScreen.svelte';
 	import Layout from './+layout.svelte';
 
-	let parentCommandInput: string;
+	// TODO: Solve this any
+	const availableCommands: { [key: string]: any } = {
+		welcome: WelcomeScreen,
+		help: HelpScreen
+	};
 
-	const handleVariableChange = () => {
-		// Change TerminalFrame children
+	let lastCommand: string;
+	const history: string[] = [];
+
+	const handleVariableChange = (command: CustomEvent<string>) => {
+		history.push(command.detail);
+		lastCommand = command.detail;
 	};
 </script>
 
-<p>{parentCommandInput}</p>
 <Layout>
-	<TerminalFrame bind:commandInput={parentCommandInput} on:variableChange={handleVariableChange}
-		>This is just a test</TerminalFrame
-	>
+	<TerminalFrame on:variableChange={handleVariableChange}>
+		{#if !lastCommand}
+			<svelte:component
+				this={availableCommands['welcome']}
+				on:variableChange={handleVariableChange}
+			/>
+		{:else if lastCommand && availableCommands[lastCommand]}
+			<svelte:component
+				this={availableCommands[lastCommand]}
+				on:variableChange={handleVariableChange}
+			/>
+		{:else}
+			Wrong Command
+		{/if}
+	</TerminalFrame>
 </Layout>
