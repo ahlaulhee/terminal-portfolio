@@ -2,7 +2,7 @@
 	import 'iconify-icon';
 	import { createEventDispatcher, onMount } from 'svelte';
 	import data from '../assets/data.json';
-	import { cascade } from 'svelte-typewriter';
+	import { concurrent } from 'svelte-typewriter';
 
 	let animate = false;
 
@@ -23,7 +23,7 @@
 	};
 </script>
 
-<div class="flex justify-between flex-col lg:flex-row space-x-4" use:cascade={{ interval: 5 }}>
+<div class="flex justify-between flex-col lg:flex-row space-x-4" use:concurrent={{}}>
 	<div>
 		<pre>{name}</pre>
 		<p>
@@ -35,20 +35,29 @@
 	</div>
 	<div class="flex flex-col text-center">
 		<!-- TODO: Add Icons for each contact method -->
-		<p class="text-lg font-bold border-dashed border-b-2">
-			{data.name}
+		<p class="text-lg font-bold border-dashed border-b-2 flex justify-center space-x-2 p-1 mb-1">
+			<iconify-icon icon="mdi:account-circle" height={28}></iconify-icon>
+			<span>{data.name}</span>
 		</p>
-		<p class="italic font-semibold">
+		<p class="italic font-semibold flex justify-center space-x-2">
+			<iconify-icon icon="mdi:at" height={23}></iconify-icon>
+			<span>Mail</span> <span class="text-lg"> > </span>
+			<span class="font-normal">{data.email}</span>
+		</p>
+		<p class="italic font-semibold flex justify-center space-x-2">
+			<iconify-icon icon="mdi:file-account" height={23}></iconify-icon>
 			<span>Resume</span> <span class="text-lg"> > </span>
-			<span class="underline font-normal">on progress</span>
+			<span class="font-normal">on progress</span>
 		</p>
-		<a href={data.github} class="italic font-semibold"
-			><span>Github</span><span class="text-xl"> > </span>
-			<span class="underline font-normal">{data.github.substring(8)}</span></a
+		<a href={data.github} class="italic font-semibold flex justify-center space-x-2">
+			<iconify-icon icon="mdi:github" height={23}></iconify-icon>
+			<span>Github</span><span class="text-xl"> > </span>
+			<span class="underline decoration-double font-normal">{data.github.substring(8)}</span></a
 		>
-		<a href={data.linkedin} class="italic font-semibold"
-			><span>LinkedIn</span><span class="text-xl"> > </span>
-			<span class="underline font-normal">{data.linkedin.substring(12)}</span></a
+		<a href={data.linkedin} class="italic font-semibold flex justify-center space-x-2">
+			<iconify-icon icon="mdi:linkedin" height={23}></iconify-icon>
+			<span>LinkedIn</span><span class="text-xl"> > </span>
+			<span class="underline decoration-double font-normal">{data.linkedin.substring(8)}</span></a
 		>
 	</div>
 </div>

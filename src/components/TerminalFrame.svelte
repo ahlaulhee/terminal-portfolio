@@ -1,8 +1,7 @@
 <script lang="ts">
 	import 'iconify-icon';
 	import { createEventDispatcher, onMount } from 'svelte';
-
-	import { fly } from 'svelte/transition';
+	import { fade, scale } from 'svelte/transition';
 
 	let animate = false;
 
@@ -30,11 +29,20 @@
 		el.focus();
 	}
 	// TODO: Add funcionality to window buttons
+
+	function restart() {
+		animate = false;
+		setTimeout(() => {
+			switchMessage('welcome');
+			animate = true;
+		}, 500);
+	}
 </script>
 
 <main class="min-h-screen flex items-center justify-center">
 	{#if animate}
-		<div in:fly={{ y: 200, duration: 2000, delay: 200 }}>
+		<!-- <div in:fly={{ y: 200, duration: 2000, delay: 200 }}> -->
+		<div in:scale={{ duration: 1000 }} out:scale={{ duration: 500 }}>
 			<div class={`bg-background border-[#1f2229] border-2 shadow-md h-[95vh] w-[95vw] opacity-90`}>
 				<div class="bg-[#303640] flex justify-between text-smoke border-l-4 border-red">
 					<div class="w-1/3 text-lg text-left flex">
@@ -45,7 +53,14 @@
 					<div class="w-1/3 text-right">
 						<iconify-icon icon="mdi:window-minimize" height="28"></iconify-icon>
 						<iconify-icon icon="mdi:window-maximize" height="28"></iconify-icon>
-						<iconify-icon icon="mdi:window-close" height="28"></iconify-icon>
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
+						<!-- svelte-ignore a11y-no-static-element-interactions -->
+						<iconify-icon
+							icon="mdi:window-close"
+							height="28"
+							on:click={restart}
+							class="cursor-pointer"
+						></iconify-icon>
 					</div>
 				</div>
 				<div class="w-full text-smoke px-4 pt-2">

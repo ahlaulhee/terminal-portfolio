@@ -1,5 +1,6 @@
 <script lang="ts">
 	import HelpScreen from '../components/HelpScreen.svelte';
+	import JobsScreen from '../components/JobsScreen.svelte';
 	import TerminalFrame from '../components/TerminalFrame.svelte';
 	import WelcomeScreen from '../components/WelcomeScreen.svelte';
 	import Layout from './+layout.svelte';
@@ -7,7 +8,8 @@
 	// TODO: Solve this any
 	const availableCommands: { [key: string]: any } = {
 		welcome: WelcomeScreen,
-		help: HelpScreen
+		help: HelpScreen,
+		jobs: JobsScreen
 	};
 
 	let lastCommand: string;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { cascade } from 'svelte-typewriter';
+	import { concurrent } from 'svelte-typewriter';
 
 	interface Command {
 		name: string;
@@ -55,9 +55,9 @@
 	};
 </script>
 
-<div use:cascade={{ interval: 1 }}>
-	<p class="font-semibold">Here is a list of all the available commands:</p>
-	{#each commands as command, i}
+<div use:concurrent={{}}>
+	<p class="font-semibold text-foreground">Here is a list of all the available commands:</p>
+	{#each commands as command, i (i)}
 		<div class="flex">
 			<div class={`w-1/4 ${i % 2 === 0 ? 'text-yellow' : 'text-blue'}`}>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
