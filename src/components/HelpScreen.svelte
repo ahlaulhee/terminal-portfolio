@@ -7,6 +7,7 @@
 		description: string;
 	}
 	// TODO: Add history command?
+	// TODO: Move the commands and the interfaces to separate files
 	const commands: Command[] = [
 		{
 			name: 'welcome',

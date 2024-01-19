@@ -1,6 +1,8 @@
 <script>
 	import data from '../assets/data.json';
 	import { concurrent } from 'svelte-typewriter';
+
+	// TODO: Fix date not having the typewriting effect
 </script>
 
 <div class="flex flex-col" use:concurrent={{}}>

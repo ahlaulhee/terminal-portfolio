@@ -1,7 +1,7 @@
 <script lang="ts">
 	import 'iconify-icon';
 	import { createEventDispatcher, onMount } from 'svelte';
-	import { fade, scale } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
 
 	let animate = false;
 
@@ -28,14 +28,14 @@
 	function focusOnInit(el: HTMLInputElement) {
 		el.focus();
 	}
-	// TODO: Add funcionality to window buttons
+	// TODO: Add funcionality to window buttons?
 
 	function restart() {
 		animate = false;
 		setTimeout(() => {
 			switchMessage('welcome');
 			animate = true;
-		}, 500);
+		}, 1000);
 	}
 </script>
 
