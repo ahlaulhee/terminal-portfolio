@@ -20,18 +20,9 @@
 				"certificate": ""
 			}
 		],
-		"tech_languages": ["HTML5", "CSS3", "JavaScript", "TypeScript", "Java", "Python", "C#"],
-		"frameworks": [
-			"NextJS",
-			"React",
-			"React Native",
-			".NET",
-			"NodeJS",
-			"Svelte",
-			"Angular",
-			"Spring"
-		],
-		"databases": ["MongoDB", "MySQL", "PostgresQL", "Microsoft SQL Server", "Firebase"],
+		"tech_languages": ["HTML5", "CSS3", "JavaScript", "TypeScript", "Java", "Python", "CSharp"],
+		"frameworks": ["NextJS", "React", "DOT-NET", "NodeJS", "Svelte", "AngularJS", "Spring"],
+		"databases": ["MongoDB", "MySQL", "PostgresQL", "MicrosoftSQLServer", "Firebase"],
 		"os": ["Linux", "Windows"]
 	},
 

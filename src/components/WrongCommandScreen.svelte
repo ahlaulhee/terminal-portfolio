@@ -9,18 +9,16 @@
 	};
 </script>
 
-<div class="text-red font-semibold" use:concurrent={{}}>
-	<p class="text-lg text-center">Oops! It seems like you entered an unknown command. 🤔</p>
+<div class="text-error font-semibold" use:concurrent={{}}>
+	<p class="text-xl text-center">Error: Unknown command.</p>
 
-	<p>
+	<p class="text-lg text-center">
 		<span>If you're not sure where to go, type (or click) </span>
-		<span class="neonText" on:click={() => switchMessage('help')}>'help'</span>
-		<span>
-			to see a list of available commands. Alternatively, feel free to explore the welcome screen or
-			check out the available sections by typing their names.
-		</span>
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<span class="neonText cursor-pointer" on:click={() => switchMessage('help')}>'help'</span>
+		<span> to see a list of available commands. </span>
 	</p>
-	<p class="text-lg text-center">Happy navigating! 🚀</p>
 </div>
 
 <style>

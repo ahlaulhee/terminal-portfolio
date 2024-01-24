@@ -57,7 +57,7 @@
 </script>
 
 <div use:concurrent={{}}>
-	<p class="font-semibold text-foreground">Here is a list of all the available commands:</p>
+	<p class="font-semibold">Here is a list of all the available commands:</p>
 	{#each commands as command, i (i)}
 		<div class="flex">
 			<div class={`w-1/4 ${i % 2 === 0 ? 'text-yellow' : 'text-blue'}`}>
