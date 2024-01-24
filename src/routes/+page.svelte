@@ -5,6 +5,7 @@
 	import TerminalFrame from '../components/TerminalFrame.svelte';
 	import WelcomeScreen from '../components/WelcomeScreen.svelte';
 	import WrongCommandScreen from '../components/WrongCommandScreen.svelte';
+	import SocialsScreen from '../components/SocialsScreen.svelte'
 	import Layout from './+layout.svelte';
 
 	// TODO: Solve this any
@@ -13,6 +14,7 @@
 		help: HelpScreen,
 		jobs: JobsScreen,
 		aboutme: AboutMeScreen,
+		socials: SocialsScreen,
 		error: WrongCommandScreen
 	};
 

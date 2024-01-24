@@ -23,6 +23,8 @@
 	// Press [↑][↓] to scroll through your history of commands.
 	// Maybe add rm -rf . as an easter egg
 	// TODO: Change background and repeat it to fix some responsiveness issues
+	// TODO: Move the command logic to a store (svelte/store)
+	// TODO: Move the typewriter class to a directive and remove repetitive code
 
 	const handleKeyPress = (event: KeyboardEvent) => {
 		if (!commandInput) return;
@@ -115,5 +117,38 @@
 			0 0 7px #fff,
 			0 0 10px #fff,
 			0 0 21px #fff;
+	}
+
+	@keyframes typewriter {
+		from {
+			width: 0;
+		}
+		to {
+			width: 100%;
+		}
+	}
+
+	:global(.typewriter) {
+		display: inline-block;
+		overflow: hidden; /* Ensure text is hidden as it types */
+		white-space: nowrap; /* Prevent text from wrapping */
+		animation: typewriter 1s steps(40) 0.1s 1 normal both; /* Adjust animation duration and steps as needed */
+	}
+
+	.typewriter::after {
+		content: '|';
+		display: inline-block;
+		width: 0;
+		animation: blink-caret 0.75s step-end infinite;
+	}
+
+	@keyframes blink-caret {
+		from,
+		to {
+			border-color: transparent;
+		}
+		50% {
+			border-color: black; /* Change color as needed */
+		}
 	}
 </style>

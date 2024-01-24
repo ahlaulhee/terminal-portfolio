@@ -1,14 +1,8 @@
 <script lang="ts">
 	import 'iconify-icon';
-	import { createEventDispatcher, onMount } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
+	import typewriter from '../directives/typewriter'
 	import data from '../assets/data.json';
-	import { concurrent } from 'svelte-typewriter';
-
-	let animate = false;
-
-	onMount(() => {
-		animate = true;
-	});
 
 	const dispatch = createEventDispatcher();
 
@@ -23,7 +17,7 @@
 	};
 </script>
 
-<div class="flex justify-between flex-col lg:flex-row space-x-4" use:concurrent={{}}>
+<div class="flex justify-between flex-col lg:flex-row space-x-4" in:typewriter={{ speed: 3 }}>
 	<div class="space-y-4">
 		<pre>{name}</pre>
 		<p>

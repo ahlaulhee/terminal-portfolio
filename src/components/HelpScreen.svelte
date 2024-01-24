@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { concurrent } from 'svelte-typewriter';
+	import typewriter from '../directives/typewriter'
 
 	interface Command {
 		name: string;
@@ -56,7 +56,7 @@
 	};
 </script>
 
-<div use:concurrent={{}}>
+<div in:typewriter={{speed: 2}}>
 	<p class="font-semibold">Here is a list of all the available commands:</p>
 	{#each commands as command, i (i)}
 		<div class="flex">

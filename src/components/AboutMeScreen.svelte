@@ -1,18 +1,20 @@
 <script>
 	import data from '../assets/data.json';
-	import { concurrent, loopOnce } from 'svelte-typewriter';
-	import { fade } from 'svelte/transition';
+	import { loopOnce } from 'svelte-typewriter';
+	import typewriter from '../directives/typewriter'
+
+	// TODO: Show icons only after aboutme finish its animation
 </script>
 
 <p class="text-center text-4xl mb-2 font-bold underline" use:loopOnce={{ interval: 150 }}>
 	About Me
 </p>
-<div class="flex flex-col md:flex-row space-x-4" in:fade={{ duration: 2000 }} use:concurrent={{}}>
+<div class="flex flex-col md:flex-row space-x-4" in:typewriter={{ speed: 3 }} >
 	<div class="flex flex-col w-full space-y-4">
-		<div class="border-2 border-dark rounded-lg py-2 px-3 text-justify text-lg">
+		<div class="rounded-lg py-2 px-3 text-justify text-lg">
 			{data.bio}
 		</div>
-		<div class="border-2 border-dark rounded-lg p-4 space-y-8">
+		<div class="rounded-lg p-4 space-y-8">
 			<div class="space-y-2">
 				<p class="font-semibold text-xl">Tech:</p>
 				<div class="flex flex-wrap justify-evenly">
@@ -48,7 +50,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="border-2 border-dark rounded-lg w-fit p-2">
+	<div class="rounded-lg w-fit p-2">
 		<img src={data.photo} alt="PFP" class="rounded-lg h-full object-cover" />
 	</div>
 </div>
