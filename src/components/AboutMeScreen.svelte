@@ -3,6 +3,17 @@
 	import { loopOnce } from 'svelte-typewriter';
 	import typewriter from '../directives/typewriter'
 
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+
+	let showIcons = false;
+
+	onMount(() => {
+		setInterval(() => {
+			showIcons = true;
+		}, 3500);
+	});
+
 	// TODO: Show icons only after aboutme finish its animation
 
 	const pfp = `
@@ -42,41 +53,43 @@
 		{pfp}
 	</pre>
 	<div>
-		<p class="text-justify text-base md:text-lg">
-			I embarked on my software development journey during high school, turning my passion into a career at Universidad Tecnológica Nacional in Córdoba, where I earned my Programming degree in 2023. I thrive on learning new technologies, solving problems, and driving innovation. Proficient in the MERN stack, I continually seek to broaden my expertise and embrace fresh challenges in software development.
+		<p class="text-justify text-base xl:text-lg">
+			{data.bio}
 		</p>
-		<div class="space-y-2">
+		{#if showIcons}
+		<div class="space-y-2" in:fade>
 			<p class="font-semibold text-xl">Tech:</p>
 			<div class="flex flex-wrap justify-evenly">
 				{#each data.skills.tech_languages as tech}
 					<div class="flex flex-col text-center">
-						<i class={`devicon-${tech.toLowerCase()}-plain colored text-6xl`}></i>
+						<i class={`devicon-${tech.toLowerCase()}-plain colored text-5xl xl:text-6xl`}></i>
 						<p class="hidden md:block">{tech}</p>
 					</div>
 				{/each}
 			</div>
 		</div>
-		<div class="space-y-2">
+		<div class="space-y-2" in:fade>
 			<p class="font-semibold text-xl">Frameworks:</p>
 			<div class="flex flex-wrap justify-evenly">
 				{#each data.skills.frameworks as fw}
 					<div class="flex flex-col text-center">
-						<i class={`devicon-${fw.toLowerCase()}-plain colored text-6xl`}></i>
+						<i class={`devicon-${fw.toLowerCase()}-plain colored text-5xl xl:text-6xl`}></i>
 						<p class="hidden md:block">{fw}</p>
 					</div>
 				{/each}
 			</div>
 		</div>
-		<div class="space-y-2">
+		<div class="space-y-2" in:fade>
 			<p class="font-semibold text-xl">Databases:</p>
 			<div class="flex flex-wrap justify-evenly">
 				{#each data.skills.databases as db}
 					<div class="flex flex-col text-center">
-						<i class={`devicon-${db.toLowerCase()}-plain colored text-6xl`}></i>
+						<i class={`devicon-${db.toLowerCase()}-plain colored text-5xl xl:text-6xl`}></i>
 						<p class="hidden md:block">{db}</p>
 					</div>
 				{/each}
 			</div>
 		</div>
+		{/if}
 	</div>
 </div>
