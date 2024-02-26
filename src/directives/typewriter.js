@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
+
+// ALL CREDITS TO https://medium.com/@weimingwu
+// https://weimingwu.medium.com/a-better-typewriter-transition-in-svelte-528e9610ec2e
 export default function typewriter(node, { delay = 0, speed = 50 }) {
 	const textNodes = getAllTextNodes(node);
 	if (!textNodes.length) {
