@@ -53,7 +53,7 @@
 		<!-- <div in:fly={{ y: 200, duration: 2000, delay: 200 }}> -->
 		<div in:scale={{ duration: 1000 }} out:scale={{ duration: 500 }}>
 			<div
-				class={`bg-background border-[#1f2229] border-2 shadow-md h-[95vh] w-[95vw] opacity-90 relative`}
+				class={`bg-background border-[#1f2229] h-fit border-2 shadow-md min-h-[95vh] w-[95vw] opacity-90 relative`}
 			>
 				<div class="bg-[#303640] flex justify-between text-smoke border-l-4 border-red">
 					<div class="w-1/3 text-lg text-left flex">

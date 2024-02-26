@@ -7,6 +7,7 @@
 	import WrongCommandScreen from '../components/WrongCommandScreen.svelte';
 	import SocialsScreen from '../components/SocialsScreen.svelte'
 	import Layout from './+layout.svelte';
+	import EducationScreen from '../components/EducationScreen.svelte';
 
 	// TODO: Solve this any
 	const availableCommands: { [key: string]: any } = {
@@ -14,6 +15,7 @@
 		help: HelpScreen,
 		jobs: JobsScreen,
 		aboutme: AboutMeScreen,
+		education: EducationScreen,
 		socials: SocialsScreen,
 		error: WrongCommandScreen
 	};
